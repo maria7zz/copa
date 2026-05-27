@@ -20,7 +20,7 @@ body{
     font-family:'Poppins',sans-serif;
     background:
     linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75)),
-    url('https://images.unsplash.com/photo-1547347298-4074fc3086f0?q=80&w=1920&auto=format&fit=crop');
+    url('https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=1920&auto=format&fit=crop');
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
@@ -85,6 +85,21 @@ nav a:hover{
     color:#ffdf00;
     margin-bottom:20px;
     text-shadow:0 0 25px rgba(255,223,0,0.7);
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+
+from{
+    text-shadow:0 0 20px #ffdf00;
+}
+
+to{
+    text-shadow:
+    0 0 30px #ffdf00,
+    0 0 60px #ffdf00;
+}
+
 }
 
 .hero p{
@@ -108,6 +123,9 @@ nav a:hover{
 
 .hero button:hover{
     transform:scale(1.08);
+    box-shadow:
+    0 0 20px #ffdf00,
+    0 0 40px #00ff88;
 }
 
 /* PADRÃO */
@@ -163,6 +181,7 @@ section{
 .team-card:hover{
     transform:translateY(-10px);
     box-shadow:0 0 30px rgba(255,223,0,0.4);
+    border:1px solid #ffdf00;
 }
 
 .team-card img{
@@ -234,7 +253,7 @@ section{
     line-height:2;
 }
 
-/* CAMPO TÁTICO */
+/* CAMPO */
 
 .tactic-field{
     position:relative;
@@ -242,22 +261,30 @@ section{
     max-width:1200px;
     height:900px;
     margin:auto;
-    background:linear-gradient(to bottom,#009c3b,#006d2c);
+
+    background:
+    repeating-linear-gradient(
+    0deg,
+    #009c3b 0px,
+    #009c3b 80px,
+    #00a63f 80px,
+    #00a63f 160px
+    );
+
     border:8px solid white;
     border-radius:25px;
     overflow:hidden;
     box-shadow:0 0 40px rgba(0,0,0,0.6);
 }
 
-/* LINHAS */
-
 .middle-line{
     position:absolute;
-    width:4px;
-    height:100%;
+    width:100%;
+    height:4px;
     background:white;
-    left:50%;
-    transform:translateX(-50%);
+    top:50%;
+    left:0;
+    transform:translateY(-50%);
 }
 
 .middle-circle{
@@ -331,7 +358,8 @@ section{
     position:absolute;
     width:90px;
     text-align:center;
-    cursor:move;
+    cursor:grab;
+    user-select:none;
 }
 
 .tactic-player img{
@@ -341,6 +369,12 @@ section{
     border:4px solid #ffdf00;
     object-fit:cover;
     background:white;
+    transition:0.3s;
+}
+
+.tactic-player img:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 20px #ffdf00;
 }
 
 .tactic-player h4{
@@ -379,8 +413,6 @@ footer h2{
     margin-bottom:10px;
 }
 
-/* RESPONSIVO */
-
 @media(max-width:900px){
 
 .hero h1{
@@ -395,9 +427,8 @@ footer h2{
 
 </style>
 </head>
-<body>
 
-<!-- NAVBAR -->
+<body>
 
 <header>
 
@@ -412,8 +443,6 @@ footer h2{
 
 </header>
 
-<!-- HERO -->
-
 <section class="hero">
 
 <div class="hero-content">
@@ -421,8 +450,7 @@ footer h2{
 <h1>Copa do Mundo 2026</h1>
 
 <p>
-Acompanhe tudo sobre a Seleção Brasileira, os jogos,
-os destaques das seleções e monte sua própria formação tática.
+Acompanhe tudo sobre a Seleção Brasileira, jogos, destaques e monte sua escalação.
 </p>
 
 <button>Explorar Copa</button>
@@ -431,92 +459,48 @@ os destaques das seleções e monte sua própria formação tática.
 
 </section>
 
-<!-- HISTÓRIA -->
-
-<section>
-
-<div class="section-title">
-<h2>História do Brasil</h2>
-<p>A maior seleção da história do futebol mundial.</p>
-</div>
-
-<div class="history">
-
-<p>
-O Brasil é a única seleção que participou de todas as Copas do Mundo.
-A história do Brasil na Copa do Mundo começou em 1930, quando aconteceu a primeira
- edição do torneio no Uruguai. Desde então, a seleção brasileira se tornou uma das mais
- importantes do futebol mundial e é a única que participou de todas as Copas do Mundo.
-  O Brasil também é o maior campeão da competição,com cinco títulos conquistados nos 
-anos de 1958, 1962, 1970, 1994 e 2002. Ao longo dessa trajetória, muitos jogadores fizeram 
-história, como Pelé, considerado um dos maiores jogadores de todos os tempos, além de Garrincha, 
-Romário, Ronaldo Nazário, Ronaldinho Gaúcho e Neymar.Além dos títulos, a seleção viveu momentos
-muito marcantes, como a derrota para o Uruguai na final da Copa de 1950, no estádio Maracanã,
-e também o 7 a 1 contra a Alemanha em 2014, que ficou marcado na história do futebol. Mesmo com 
-algumas derrotas difíceis,o Brasil continua sendo conhecido mundialmente pelo seu futebol alegre,
-pelos dribles, pela torcida apaixonada e pelos grandes talentos que revelou ao longo dos anos.
-A seleção brasileira representa muito orgulho para os torcedores e sempre entra nas Copas como 
-uma das favoritas ao título. 🇧🇷⚽
-</p>
-
-</div>
-
-</section>
-
-<!-- SELEÇÕES -->
-
 <section>
 
 <div class="section-title">
 <h2>Seleções da Copa</h2>
-<p>Principais seleções e seus destaques.</p>
+<p>Grandes seleções e estrelas do futebol mundial.</p>
 </div>
 
 <div class="teams-grid">
 
 <div class="team-card">
 <img src="https://upload.wikimedia.org/wikipedia/pt/9/99/CBF_2019.svg">
-
 <h3>Brasil 🇧🇷</h3>
-
 <div class="highlight-box">
 <p>⭐ Vinicius Jr</p>
-<p>⭐ Luiz Henrique</p>
-<p>⭐ Endrick</p>
- <p>⭐ Neymar</p>
+<p>⭐ Neymar</p>
+<p>⭐ Rodrygo</p>
 </div>
 </div>
 
 <div class="team-card">
 <img src="https://upload.wikimedia.org/wikipedia/en/c/c1/AFA_logo.svg">
-
 <h3>Argentina 🇦🇷</h3>
-
 <div class="highlight-box">
 <p>⭐ Messi</p>
-<p>⭐ Enzo Fernández</p>
 <p>⭐ Julián Álvarez</p>
- <p>⭐ Rodrigo de Paul</p>
+<p>⭐ Enzo Fernández</p>
 </div>
 </div>
 
 <div class="team-card">
 <img src="https://upload.wikimedia.org/wikipedia/en/c/c7/FFF.svg">
-
 <h3>França 🇫🇷</h3>
-
 <div class="highlight-box">
 <p>⭐ Mbappé</p>
-<p>⭐ Michael Olise</p>
 <p>⭐ Dembélé</p>
+<p>⭐ Camavinga</p>
 </div>
 </div>
 
 <div class="team-card">
 <img src="https://upload.wikimedia.org/wikipedia/en/5/5f/Portuguese_Football_Federation.svg">
-
 <h3>Portugal 🇵🇹</h3>
-
 <div class="highlight-box">
 <p>⭐ Cristiano Ronaldo</p>
 <p>⭐ Bruno Fernandes</p>
@@ -528,80 +512,11 @@ uma das favoritas ao título. 🇧🇷⚽
 
 </section>
 
-<!-- JOGOS -->
-
-<section>
-
-<div class="section-title">
-<h2>Jogos da Copa</h2>
-<p>Resultados e destaques das partidas.</p>
-</div>
-
-<div class="matches-grid">
-
-<div class="match-card">
-
-<div class="match-teams">
-
-<div class="match-team">
-<img src="https://upload.wikimedia.org/wikipedia/pt/9/99/CBF_2019.svg">
-<h3>Brasil</h3>
-</div>
-
-<div class="score">3 x 1</div>
-
-<div class="match-team">
-<img src="https://upload.wikimedia.org/wikipedia/en/c/c1/AFA_logo.svg">
-<h3>Argentina</h3>
-</div>
-
-</div>
-
-<div class="match-info">
-<p><strong>Resultado:</strong> Vitória do Brasil</p>
-<p><strong>Destaque:</strong> Vinicius Jr ⭐</p>
-<p><strong>Estádio:</strong> Maracanã</p>
-</div>
-
-</div>
-
-<div class="match-card">
-
-<div class="match-teams">
-
-<div class="match-team">
-<img src="https://upload.wikimedia.org/wikipedia/en/c/c7/FFF.svg">
-<h3>França</h3>
-</div>
-
-<div class="score">2 x 2</div>
-
-<div class="match-team">
-<img src="https://upload.wikimedia.org/wikipedia/en/5/5f/Portuguese_Football_Federation.svg">
-<h3>Portugal</h3>
-</div>
-
-</div>
-
-<div class="match-info">
-<p><strong>Resultado:</strong> Empate</p>
-<p><strong>Destaque:</strong> Mbappé ⭐</p>
-<p><strong>Estádio:</strong> Lusail Stadium</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- TÁTICA -->
-
 <section>
 
 <div class="section-title">
 <h2>Esquema Tático</h2>
-<p>Monte a Seleção Brasileira do seu jeito.</p>
+<p>Monte sua Seleção Brasileira.</p>
 </div>
 
 <div class="tactic-field">
@@ -621,112 +536,118 @@ uma das favoritas ao título. 🇧🇷⚽
 <!-- JOGADORES -->
 
 <div class="tactic-player p1">
-<img src="https://i.imgur.com/QIrZWGIs.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Alisson_Becker_2018.jpg">
 <h4>Alisson</h4>
 </div>
 
 <div class="tactic-player p2">
-<img src="https://i.imgur.com/QIrZWGIs.jpg">
-<h4>Lateral</h4>
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Guilherme_Arana.jpg">
+<h4>Arana</h4>
 </div>
 
 <div class="tactic-player p3">
-<img src="https://i.imgur.com/QIrZWGIs.jpg">
-<h4>Zagueiro</h4>
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Marquinhos_PSG.jpg">
+<h4>Marquinhos</h4>
 </div>
 
 <div class="tactic-player p4">
-<img src="https://i.imgur.com/QIrZWGIs.jpg">
-<h4>Zagueiro</h4>
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Eder_Militao_2018.jpg">
+<h4>Militão</h4>
 </div>
 
 <div class="tactic-player p5">
-<img src="https://i.imgur.com/QIrZWGIs.jpg">
-<h4>Lateral</h4>
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Danilo_Luiz_da_Silva.jpg">
+<h4>Danilo</h4>
 </div>
 
 <div class="tactic-player p6">
-<img src="https://i.imgur.com/QIrZWGIs.jpg">
-<h4>Meia</h4>
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Bruno_Guimaraes_2022.jpg">
+<h4>Bruno G.</h4>
 </div>
 
 <div class="tactic-player p7">
-<img src="https://i.imgur.com/QIrZWGIs.jpg">
-<h4>Volante</h4>
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Casemiro_2022.jpg">
+<h4>Casemiro</h4>
 </div>
 
 <div class="tactic-player p8">
-<img src="https://i.imgur.com/QIrZWGIs.jpg">
-<h4>Meia</h4>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Lucas_Paqueta_2022.jpg">
+<h4>Paquetá</h4>
 </div>
 
 <div class="tactic-player p9">
-<img src="https://i.imgur.com/QIrZWGIs.jpg">
-<h4>Ponta</h4>
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Vinicius_Jr_2023.jpg">
+<h4>Vini Jr</h4>
 </div>
 
 <div class="tactic-player p10">
-<img src="https://i.imgur.com/QIrZWGIs.jpg">
-<h4>Atacante</h4>
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Rodrygo_2023.jpg">
+<h4>Rodrygo</h4>
 </div>
 
 <div class="tactic-player p11">
-<img src="https://i.imgur.com/QIrZWGIs.jpg">
-<h4>Ponta</h4>
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Neymar_2018.jpg">
+<h4>Neymar</h4>
 </div>
 
 </div>
 
 </section>
 
-<!-- FOOTER -->
-
 <footer>
 
 <h2>Brasil na Copa do Mundo 🇧🇷</h2>
 
-<p>
-Site desenvolvido em HTML + CSS + JavaScript.
-</p>
+<p>Site desenvolvido em HTML + CSS + JavaScript.</p>
 
 </footer>
 
-<!-- SCRIPT -->
-
 <script>
 
+const field = document.querySelector(".tactic-field");
 const players = document.querySelectorAll(".tactic-player");
 
 players.forEach(player => {
 
-    player.onmousedown = function(event){
+let isDragging = false;
+let offsetX = 0;
+let offsetY = 0;
 
-        let shiftX = event.clientX - player.getBoundingClientRect().left;
-        let shiftY = event.clientY - player.getBoundingClientRect().top;
+player.addEventListener("mousedown", (e) => {
 
-        moveAt(event.pageX, event.pageY);
+    isDragging = true;
 
-        function moveAt(pageX, pageY){
-            player.style.left = pageX - shiftX + 'px';
-            player.style.top = pageY - shiftY + 'px';
-        }
+    const rect = player.getBoundingClientRect();
 
-        function onMouseMove(event){
-            moveAt(event.pageX, event.pageY);
-        }
+    offsetX = e.clientX - rect.left;
+    offsetY = e.clientY - rect.top;
 
-        document.addEventListener('mousemove', onMouseMove);
+    player.style.zIndex = "999";
 
-        player.onmouseup = function(){
-            document.removeEventListener('mousemove', onMouseMove);
-            player.onmouseup = null;
-        };
+});
 
-    };
+document.addEventListener("mousemove", (e) => {
 
-    player.ondragstart = function(){
-        return false;
-    };
+    if(!isDragging) return;
+
+    const fieldRect = field.getBoundingClientRect();
+
+    let x = e.clientX - fieldRect.left - offsetX;
+    let y = e.clientY - fieldRect.top - offsetY;
+
+    x = Math.max(0, Math.min(x, field.clientWidth - player.offsetWidth));
+    y = Math.max(0, Math.min(y, field.clientHeight - player.offsetHeight));
+
+    player.style.left = x + "px";
+    player.style.top = y + "px";
+
+});
+
+document.addEventListener("mouseup", () => {
+
+    isDragging = false;
+
+});
 
 });
 
