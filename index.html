@@ -803,89 +803,104 @@ Acompanhe tudo sobre a Seleção Brasileira, jogos, destaques e monte sua escala
 
         <button onclick="fecharMeioAmbiente()" class="voltar-btn">
             ⬅ Voltar para Página Inicial
-        </button>
+        </button<div class="ambiente-box">
+
+        <h2>💻 Programação Web e Futuro Digital</h2>>
 
     </div>
+
+</section>
+
 <section id="paginaTecnologia" class="pagina-ambiente">
+    
+    ```html
+<div class="ambiente-box">
 
-    <div class="ambiente-box">
+<h2>🚀 Tecnologia, Programação e o Futuro</h2>
 
-        <h2>💻 Programação Web e Futuro Digital</h2>
+<p>
+A internet conecta bilhões de pessoas todos os dias. Por trás dos sites,
+aplicativos, jogos e redes sociais existem programadores que transformam
+ideias em realidade através da tecnologia.
+</p>
 
-        <p>
-            A tecnologia está presente em praticamente tudo o que fazemos.
-            Aplicativos, sites, jogos, redes sociais e plataformas digitais
-            são criados por profissionais que utilizam programação para
-            transformar ideias em soluções.
-        </p>
+<div class="highlight-box">
+<h3>🌎 Conectando o Mundo</h3>
+<p>
+Um único site pode ser acessado por pessoas de diferentes países em poucos segundos.
+A programação permite criar soluções que alcançam o mundo inteiro.
+</p>
+</div>
 
-        <div class="highlight-box">
-            <h3>🌐 Seu Site Pode Ser Acessado no Mundo Todo</h3>
-            <p>
-                Um site criado em sua cidade pode ser visitado por pessoas
-                de qualquer país em poucos segundos.
-            </p>
-        </div>
+<br>
 
-        <br>
+<div class="highlight-box">
+<h3>💡 Criatividade + Tecnologia</h3>
+<p>
+Programar não significa apenas escrever códigos. Significa criar, inovar,
+resolver problemas e desenvolver projetos que ajudam outras pessoas.
+</p>
+</div>
 
-        <div class="highlight-box">
-            <h3>🚀 Grandes Empresas Começaram Pequenas</h3>
-            <p>
-                Muitos projetos digitais começaram em quartos, garagens
-                ou escolas antes de se tornarem conhecidos mundialmente.
-            </p>
-        </div>
+<br>
 
-        <br>
+<div class="highlight-box">
+<h3>📚 Aprender Hoje para Construir Amanhã</h3>
+<p>
+Os conhecimentos adquiridos na escola são a base para profissões ligadas
+à tecnologia, desenvolvimento web, inteligência artificial e inovação digital.
+</p>
+</div>
 
-        <div class="highlight-box">
-            <h3>💡 Programação é Criatividade</h3>
-            <p>
-                Programar não é apenas escrever códigos. É criar soluções,
-                desenvolver ideias e resolver problemas do dia a dia.
-            </p>
-        </div>
+<br>
 
-        <br>
+<div class="highlight-box">
+<h3>⚖️ Empreender com Responsabilidade</h3>
+<p>
+Ganhar experiência e desenvolver projetos é importante, mas os estudos,
+a saúde, o lazer e a convivência social devem sempre vir em primeiro lugar.
+</p>
+</div>
 
-        <div class="highlight-box">
-            <h3>📚 O Conhecimento é o Maior Investimento</h3>
-            <p>
-                Quanto mais você aprende, maiores são as oportunidades
-                que podem surgir no futuro.
-            </p>
-        </div>
+<br>
 
-        <br>
+<div class="highlight-box">
+<h3>🏆 Desafio Interativo</h3>
+<p>
+Imagine que você recebeu a missão de criar um aplicativo para melhorar a vida
+das pessoas da sua cidade. Que problema você resolveria?
+</p>
+</div>
 
-        <div class="highlight-box">
-            <h3>⚠️ Educação em Primeiro Lugar</h3>
-            <p>
-                Aprender novas habilidades é importante, mas os estudos,
-                o lazer, a saúde e o desenvolvimento pessoal devem ser
-                prioridades durante a juventude.
-            </p>
-        </div>
+<br>
 
-        <br>
+<div style="background:rgba(255,223,0,0.15);
+padding:25px;
+border-radius:20px;
+border:2px solid #ffdf00;">
 
-        <div class="highlight-box">
-            <h3>🏆 O Futuro é Construído Hoje</h3>
-            <p>
-                Cada projeto desenvolvido, cada desafio superado e cada
-                novo conhecimento adquirido representa um passo para
-                conquistar objetivos maiores.
-            </p>
-        </div>
+<h3 style="color:#ffdf00;">
+✨ Mensagem para Inspirar
+</h3>
 
-        <br><br>
+<p style="font-size:1.2rem;">
+"As oportunidades do futuro serão criadas por quem aprende hoje.
+Cada linha de código, cada novo conhecimento e cada desafio superado
+é um passo para transformar ideias em realidade."
+</p>
 
-        <button onclick="fecharTecnologia()" class="voltar-btn">
-            ⬅ Voltar para Página Inicial
-        </button>
+</div>
 
-    </div>
+<br><br>
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
+alt="Tecnologia e Programação">
+
+<button onclick="fecharTecnologia()" class="voltar-btn">
+⬅ Voltar para Página Inicial
+</button>
+
+</div>
+```
 
 </section>
     <section style="text-align:center; padding:30px;">
@@ -955,6 +970,14 @@ function fecharMeioAmbiente(){
 }
     
 </script>
+    function abrirTecnologia(){
+    document.getElementById("paginaTecnologia").style.display = "block";
+    window.scrollTo(0,0);
+}
+
+function fecharTecnologia(){
+    document.getElementById("paginaTecnologia").style.display = "none";
+}
 
 </body>
 </html>
