@@ -160,7 +160,7 @@ section{
     line-height:2;
     font-size:1.1rem;
 }
-<!-- ELENCO DO BRASIL -->
+/* ELENCO DO BRASIL */
 
 <section>
 
@@ -801,11 +801,14 @@ Acompanhe tudo sobre a Seleção Brasileira, jogos, destaques e monte sua escala
 
         <br><br>
 
-        <button onclick="fecharMeioAmbiente()" class="voltar-btn">
-            ⬅ Voltar para Página Inicial
-        </button<div class="ambiente-box">
+       <button onclick="fecharMeioAmbiente()" class="voltar-btn">
+    ⬅ Voltar para Página Inicial
+</button>
 
-        <h2>💻 Programação Web e Futuro Digital</h2>>
+</div>
+</section>
+
+        <h2>💻 Programação Web e Futuro Digital</h2>
 
     </div>
 
@@ -813,7 +816,6 @@ Acompanhe tudo sobre a Seleção Brasileira, jogos, destaques e monte sua escala
 
 <section id="paginaTecnologia" class="pagina-ambiente">
     
-    ```html
 <div class="ambiente-box">
 
 <h2>🚀 Tecnologia, Programação e o Futuro</h2>
@@ -892,8 +894,8 @@ Cada linha de código, cada novo conhecimento e cada desafio superado
 </div>
 
 <br><br>
-    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
-alt="Tecnologia e Programação">
+   <img src="https://images.unsplash.com/photo-1575361204480-aadea25e6e68?q=80&w=1200&auto=format&fit=crop"
+alt="Futebol e preservação ambiental">
 
 <button onclick="fecharTecnologia()" class="voltar-btn">
 ⬅ Voltar para Página Inicial
@@ -970,7 +972,17 @@ function fecharMeioAmbiente(){
 }
     
 </script>
-    function abrirTecnologia(){
+
+function abrirMeioAmbiente(){
+    document.getElementById("meioAmbiente").style.display = "block";
+    window.scrollTo(0,0);
+}
+
+function fecharMeioAmbiente(){
+    document.getElementById("meioAmbiente").style.display = "none";
+}
+
+function abrirTecnologia(){
     document.getElementById("paginaTecnologia").style.display = "block";
     window.scrollTo(0,0);
 }
@@ -978,6 +990,7 @@ function fecharMeioAmbiente(){
 function fecharTecnologia(){
     document.getElementById("paginaTecnologia").style.display = "none";
 }
-
+</script>
+    
 </body>
 </html>
