@@ -1328,9 +1328,6 @@ document.getElementById("selecoes").scrollIntoView({
 
 behavior: "smooth"
 
-});
-
-});
   function abrirDiscriminacao(){
 document.getElementById("paginaDiscriminacao").style.display = "block";
 window.scrollTo(0,0);
@@ -1339,12 +1336,9 @@ window.scrollTo(0,0);
 function fecharDiscriminacao(){
 document.getElementById("paginaDiscriminacao").style.display = "none";
 }
-
-});
-
-});
-
-
+  
+const cards=document.querySelectorAll(".card,.info-card");
+  
 const cards=document.querySelectorAll(".card,.info-card");
 
 const observer=new IntersectionObserver((entries)=>{
